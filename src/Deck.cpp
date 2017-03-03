@@ -4,11 +4,11 @@
 
 std::string Deck::contentSpacer(unsigned int content)
 {
-    if(log10(content) == 3)
+    if(log10(content) >=2)
     {
         return "";
     }
-    else if(log10(content) == 2)
+    else if(log10(content) >= 1)
     {
         return " ";
     }
@@ -75,6 +75,11 @@ m_maxValue(maxValue)
 
     for(unsigned int i = 0; i < m_numCards; i++)
     {
-        m_cards.push_back(Card(size, maxValue, i));
+        try {
+            m_cards.push_back(Card(size, maxValue, i));
+        } catch(Error e)
+        {
+            std::cout << "ERROR" << std::endl;
+        }
     }
 }

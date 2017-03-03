@@ -1,4 +1,3 @@
-#include <vector>
 #include <cstdlib>
 #include "Card.h"
 #include "Error.h"
@@ -7,12 +6,12 @@ Card::Card(unsigned int size, unsigned int maxValue, unsigned int id) :
 idNum(id),
 m_size(size)
 {
-    content = new unsigned int*[m_size];
+    std::vector<unsigned int> tempVect(m_size, 0);
+
     for(unsigned int i = 0; i < m_size; i++)
     {
-        content[i] = new unsigned int[m_size];
+        content.push_back(tempVect);
     }
-
     std::vector<unsigned int> usedNums;
     unsigned int temp = 0;
     unsigned int emergencyCounter = 0;
@@ -53,19 +52,4 @@ m_size(size)
 }
 
 Card::~Card()
-{
-    if(content)
-    {
-        for(unsigned int i = 0; i < m_size; i++)
-        {
-            if(content[i])
-            {
-                delete[] content[i];
-                content[i] = nullptr;
-            }
-        }
-
-        delete[] content;
-        content = nullptr;
-    }
-}
+{}

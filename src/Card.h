@@ -1,13 +1,13 @@
 #ifndef BINGOCARDS_CARD_H
 #define BINGOCARDS_CARD_H
-
+#include <vector>
 
 class Card {
 private:
     unsigned int m_size;
 public:
     //Public variables
-    unsigned int** content;
+    std::vector<std::vector<unsigned int>> content;
     unsigned int idNum;
 
     //Getters

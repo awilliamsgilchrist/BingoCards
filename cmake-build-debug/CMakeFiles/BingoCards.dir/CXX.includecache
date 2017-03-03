@@ -7,8 +7,6 @@
 #IncludeRegexTransform: 
 
 C:/Users/Andrew/CLionProjects/BingoCards/src/Card.cpp
-vector
--
 cstdlib
 -
 Card.h
@@ -17,6 +15,8 @@ Error.h
 C:/Users/Andrew/CLionProjects/BingoCards/src/Error.h
 
 C:/Users/Andrew/CLionProjects/BingoCards/src/Card.h
+vector
+-
 
 C:/Users/Andrew/CLionProjects/BingoCards/src/Deck.cpp
 cmath
