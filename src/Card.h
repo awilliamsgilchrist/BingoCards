@@ -10,12 +10,9 @@ public:
     std::vector<std::vector<unsigned int>> content;
     unsigned int idNum;
 
-    //Getters
-    unsigned int getSize() {return m_size;}
-
     //Constructors
     Card(unsigned int size, unsigned int maxValue, unsigned int id); // May throw RandomNumberGeneratorError if random number generator takes too long
-    ~Card();
+    ~Card(); //There are no pointers to clean in this class
 };
 
 

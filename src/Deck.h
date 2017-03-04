@@ -20,9 +20,11 @@ public:
     //Methods
     void printDeck(std::ostream& printLoc);
     void printCard(unsigned int card, std::ostream& printLoc);
+    std::vector<Card> getCards() { return m_cards;}
 
     //Constructors
     Deck(unsigned int size, unsigned int cards, unsigned int maxValue);
+    ~Deck(){} //There are no pointers to clean in this class
 };
 
 
